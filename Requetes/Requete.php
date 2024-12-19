@@ -1,6 +1,6 @@
 <?php
 
-require_once 'modelisation/Modele.php';
+require_once '../modelisation/Modele.php';
 
 class Requete extends Modele {
 
@@ -10,6 +10,13 @@ class Requete extends Modele {
         $data = $this->executerRequete($sql);
         return $data;
     }
+
+    public function requeteSQLHeader(){
+        $sqlHeader = 'SELECT * FROM admins';
+        $dataHeader = $this->executerRequete($sqlHeader);
+        return $dataHeader;
+}
+
 }
     /*
     public function requeteSQLPreparee(){

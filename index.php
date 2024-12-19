@@ -14,10 +14,16 @@ $data = $requete->requeteSQLIndex();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <header>
-        <h1>Titre</h1>
         <?php
-        // Affichage des données
+        require_once('_header.php');
         ?>
-        <p>AAAAAAAAAAAAAABBBBBBBBBEEEEEEEEEEEEEE</p>
-        <p>mmmmmmmmmmdfafadngabeibad</p>
     </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="Horaires/horairesIndex.php">Horaires</a></li>
+                <li><a href="Inscriptions/inscriptionsIndex.php">Inscriptions</a></li>
+                <li><a href="Ressources/ressourcesIndex.php">Ressources</a></li>
+            </ul>
+        </nav>
+    </main>
