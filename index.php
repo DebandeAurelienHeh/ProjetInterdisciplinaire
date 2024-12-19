@@ -1,10 +1,5 @@
 <?php
 
-require_once('modelisation/Modele.php');
-require_once('requetes/Requete.php');
-$requete = new Requete();
-$data = $requete->requeteSQLIndex();
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,21 +10,25 @@ $data = $requete->requeteSQLIndex();
     </head>
     <header>
         <?php
-        require_once('_header.php');
+        require_once('Gabarit/_header.php');
         ?>
     </header>
     <main>
         <nav>
-            <ul>
-                <li><a href="Horaires/horairesIndex.php">Horaires</a></li>
-                <li><a href="Inscriptions/inscriptionsIndex.php">Inscriptions</a></li>
-                <li><a href="Ressources/ressourcesIndex.php">Ressources</a></li>
-            </ul>
+            <a href="Horaires/horairesIndex.php">Horaires</a>
+            <a href="Inscriptions/inscriptionsIndex.php">Inscriptions</a>
+            <a href="Ressources/ressourcesIndex.php">Ressources</a>
         </nav>
     </main>
     <footer>
-        <?php
-        require_once('_footer.php');
-        ?>
+        <div>
+            <p>© 2024 - Tous droits réservés</p>
+        </div>
+        <div>
+            <p>Site créé pour un projet à la HEH</p>
+        </div>
+        <div>
+            <img src="Images/logoHEH.png" alt="logo de la HEH"></img>
+        </div>
     </footer>
 </html>

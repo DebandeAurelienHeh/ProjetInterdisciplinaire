@@ -6,6 +6,6 @@
         <p>Site créé pour un projet à la HEH</p>
     </div>
     <div>
-        <img href="../../ProjetInterdisciplinaire/Images/logoHEH.png" alt="logo de la HEH"></img>
+        <img src="../Images/logoHEH.png" alt="logo de la HEH"></img>
     </div>
 </footer>

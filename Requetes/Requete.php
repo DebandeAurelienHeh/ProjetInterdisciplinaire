@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../ProjetInterdisciplinaire/modelisation/Modele.php';
+require_once '../modelisation/Modele.php';
 
 
 class Requete extends Modele {
@@ -18,17 +18,26 @@ class Requete extends Modele {
         return $dataHeader;
 }
 
-}
-    /*
-    public function requeteSQLPreparee(){
-        $sqlPrepare = //SQL query ;
-        $dataPrepare = $this->executerRequete($sqlPrepare, array(
-            '' => $variable,
-            '' => $variable2,
-            '' => $variable3,
-            '' => $variable4));
-        return $dataPrepare;
-    }
+    public function requeteSQLAffichageIncidents(){
+        $sqlAffichageIncidents = 'SELECT salles_globales.numero_salle, incidents_globaux.date_signalement, incidents_globaux.description_incident, incidents_globaux.statut FROM incidents_globaux JOIN salles_globales ON incidents_globaux.id_salle=salles_globales.id_salle ORDER BY salles_globales.numero_salle;';
+        $dataAffichageSalles = $this->executerRequete($sqlAffichageIncidents);
+        return $dataAffichageSalles;
 }
 
+    public function requeteSQLAffichageSalles(){
+        $sqlAffichageSalles = 'SELECT cours_global.nom_cours, salles_globales.numero_salle, professeurs.nom FROM salles_globales JOIN cours_global ON salles_globales.id_salle=cours_global.id_salle JOIN professeurs ON cours_global.id_professeur=professeurs.id_professeur ORDER BY cours_global.nom_cours ASC;';
+        $dataAffichageSalles = $this->executerRequete($sqlAffichageSalles);
+        return $dataAffichageSalles;
+}
+}
+/*
+    public function requeteSQLPreparee(){
+        $sqlPrepare = 'INSERT INTO etudiants (nom, prenom, email, classe) VALUES (:nom, :prenom, :email, :classe)' ;
+        $dataPrepare = $this->executerRequete($sqlPrepare, array(
+            ':nom' => $nom,
+            ':prenom' => $prenom,
+            ':email' => $email,
+            ':classe' => $classe));
+        return $dataPrepare;
+}
 */
