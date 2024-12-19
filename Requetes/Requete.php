@@ -6,9 +6,9 @@ class Requete extends Modele {
 
   // Renvoie la liste des data du blog
     public function requeteSQLIndex(){
-        $sqlHeader = // SQL query;
-        $dataHeader = $this->executerRequete($sqlHeader);
-        return $dataHeader;
+        $sql = 'SELECT * FROM admins';
+        $data = $this->executerRequete($sql);
+        return $data;
     }
 }
     /*
