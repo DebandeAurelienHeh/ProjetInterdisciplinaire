@@ -1,8 +1,10 @@
 <?php
 require_once('../modelisation/Modele.php');
 require_once('../requetes/Requete.php');
-//$requete = new Requete();
-//$data = $requete->requeteSQL;
+
+$requeteUpdateStatutSalle = new Requete();
+$dataSelectStatutSalle = $requeteUpdateStatutSalle->requeteSQLSelectStatut();
+
 ?>
 
 <header>
@@ -11,9 +13,7 @@ require_once('../requetes/Requete.php');
     ?>
 </header>
 <main>
-    <?php
-        
-    ?>    
+    <p>Mise à jour de l'incident réussie !</p>  
 </main>
 </main>
 <footer>

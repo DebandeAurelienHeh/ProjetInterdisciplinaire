@@ -10,7 +10,7 @@ class Requete extends Modele {
         $sql = 'SELECT * FROM admins';
         $data = $this->executerRequete($sql);
         return $data;
-    }
+}
 
     public function requeteSQLHeader(){
         $sqlHeader = 'SELECT * FROM admins';
@@ -29,6 +29,14 @@ class Requete extends Modele {
         $dataAffichageSalles = $this->executerRequete($sqlAffichageSalles);
         return $dataAffichageSalles;
 }
+    public function requeteSQLSelectStatut(){
+        $sqlSelectStatut = 'UPDATE salles_globales JOIN incidents_globaux ON salles_globales.id_salle = incidents_globaux.id_salle 
+                            SET salles_globales.statut = incidents_globaux.statut
+                            WHERE salles_globales.statut != incidents_globaux.statut;';
+        $dataSelectStatut = $this->executerRequete($sqlSelectStatut);
+        return $dataSelectStatut;
+}
+
 }
 /*
     public function requeteSQLPreparee(){
