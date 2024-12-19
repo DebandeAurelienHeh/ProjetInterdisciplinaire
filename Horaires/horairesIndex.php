@@ -7,7 +7,7 @@
     </head>
     <header>
         <?php
-        require_once('../_header.php');
+        require_once('../Gabarit/_header.php');
         ?>
     </header>
     <main>
@@ -15,6 +15,6 @@
     </main>
     <footer>
         <?php
-        require_once('../_footer.php');
+        require_once('../Gabarit/_footer.php');
         ?>
     </footer>
