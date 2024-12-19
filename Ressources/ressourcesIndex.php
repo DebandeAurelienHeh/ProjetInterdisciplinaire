@@ -13,3 +13,8 @@
     <main>
         <p>Ressources</p>
     </main>
+    <footer>
+        <?php
+        require_once('../_footer.php');
+        ?>
+    </footer>

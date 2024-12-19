@@ -27,3 +27,9 @@ $data = $requete->requeteSQLIndex();
             </ul>
         </nav>
     </main>
+    <footer>
+        <?php
+        require_once('_footer.php');
+        ?>
+    </footer>
+</html>

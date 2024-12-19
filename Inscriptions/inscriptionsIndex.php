@@ -13,3 +13,8 @@
     <main>
         <p>Inscriptions</p>
     </main>
+    <footer>
+        <?php
+        require_once('../_footer.php');
+        ?>
+    </footer>

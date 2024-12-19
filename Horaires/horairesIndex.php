@@ -13,3 +13,8 @@
     <main>
         <p>Horaires</p>
     </main>
+    <footer>
+        <?php
+        require_once('../_footer.php');
+        ?>
+    </footer>
