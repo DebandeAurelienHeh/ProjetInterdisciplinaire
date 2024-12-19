@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #709CA7;
+    nav{
+        ul{
+            display: flex;
+            padding-left: 0;
+            li{
+                list-style: none;
+                
+                a{
+                    text-decoration: none;
+                    height: 100%;
+                    color: white;
+                    
+                    padding: 16px;
+                }
+                a:hover{
+                    background-color: #344D59;
+
+                }
+            }
+        }
+
+    }
+
+}
+.connexion{
+        text-decoration: none;
+        color: white;
+        margin-right: 10px;
+        background-color: #7A90A4;
+        padding: 10px;
+        border-radius: 5px;
+}
+
+footer img{
+    width: 100%;
+}

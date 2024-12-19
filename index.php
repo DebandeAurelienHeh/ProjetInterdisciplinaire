@@ -9,9 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <header>
-        <?php
-        require_once('Gabarit/_header.php');
-        ?>
+        <nav>
+            <ul>
+                <li><a href="Horaires/horairesIndex.php">Horaires</a></li>
+                <li><a href="Inscriptions/inscriptionsIndex.php">Inscriptions</a></li>
+                <li><a href="Ressources/ressourcesIndex.php">Ressources</a></li>
+            </ul>
+        </nav>
+        <a class="connexion" href="./connexion_page">Connexion</a>
     </header>
     <main>
         <nav>
