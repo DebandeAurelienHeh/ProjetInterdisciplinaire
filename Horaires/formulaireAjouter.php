@@ -8,11 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Vérifiez que la méthode de la 
     $email_prof = isset($_POST['email_prof']) ? $_POST['email_prof'] : '';
     htmlspecialchars(strip_tags($email_prof));
     $mdp_prof = isset($_POST['mdp_prof']) ? $_POST['mdp_prof'] : '';
-    htmlspecialchars(strip_tags(sha1($mdp_prof)));
+    htmlspecialchars(strip_tags($mdp_prof));
     $departement_prof = isset($_POST['departement_prof']) ? $_POST['departement_prof'] : '';
     htmlspecialchars(strip_tags($departement_prof));
     $numero_salle = isset($_POST['numero_salle']) ? $_POST['numero_salle'] : '';
-    htmlspecialchars(strip_tags(int($numero_salle)));
+    htmlspecialchars(strip_tags($numero_salle));
 
     $nom_cours = isset($_POST['nom_cours']) ? $_POST['nom_cours'] : '';
     htmlspecialchars(strip_tags($nom_cours));
