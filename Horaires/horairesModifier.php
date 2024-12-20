@@ -1,5 +1,6 @@
-
-
+<?php
+require_once('formulaireModifier.php');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,12 @@
         ?>
     </header>
     <main>
-    
+        <form method="post" action="">
+            <label for="choisirHeure">Entrez l'heure du cours à changer (XX:XX:XX) :</label>
+            <input type="text" id="choisirHeure" name="choisirHeure" required>
+            <label for="modifierCours">Entrez le nouveau cours :</label>
+            <input type="text" id="modifierCours" name="modifierCours" required>
+            <button type="submit">Mise à jour du cours</button>
     </main>
     <footer>
         <?php
