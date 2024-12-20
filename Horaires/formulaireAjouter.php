@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Vérifiez que la méthode de la 
     $departement_prof = isset($_POST['departement_prof']) ? $_POST['departement_prof'] : '';
     htmlspecialchars(strip_tags($departement_prof));
     $numero_salle = isset($_POST['numero_salle']) ? $_POST['numero_salle'] : '';
-    htmlspecialchars(strip_tags(int($numero_salle)));
+    htmlspecialchars(strip_tags($numero_salle));
 
     $nom_cours = isset($_POST['nom_cours']) ? $_POST['nom_cours'] : '';
     htmlspecialchars(strip_tags($nom_cours));
