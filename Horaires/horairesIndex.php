@@ -20,6 +20,10 @@ $dataSelectHoraire = $requeteSelectHoraire->requeteSQLSelectHoraire();
         ?>
     </header>
     <main>
+        <a href="horairesModifier.php">Changer l'horaire</a>
+        <a href="horairesAjouter.php">Ajouter un cours</a>
+        <a href="horairesSupprimer.php">Mettre en pause un cours</a>
+
         <p>Horaires</p>
         <?php 
         foreach ($dataSelectHoraire as $horaire) {

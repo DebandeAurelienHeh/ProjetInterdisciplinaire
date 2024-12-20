@@ -47,30 +47,26 @@ class Requete extends Modele {
         return $dataSelectHoraire;
 }
 
+    public function requeteSQLPauseHoraire(){
+        $sqlPauseHoraire = "UPDATE cours_global
+                            SET cours_global.nom_cours = 'Annuler'
+                            WHERE cours_global.id_cours IN (
+                                                SELECT plannings_globaux.id_cours
+                                                FROM plannings_globaux
+                                                WHERE plannings_globaux.horaire = '$changerCours');";
+        $dataPauseHoraire = $this->executerRequete($sqlPauseHoraire, $changerCours);
+        return $dataPauseHoraire;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
+
+
+
+
+
+
+
+
 /*
     public function requeteSQLPreparee(){
         $sqlPrepare = 'INSERT INTO etudiants (nom, prenom, email, classe) VALUES (:nom, :prenom, :email, :classe)' ;
