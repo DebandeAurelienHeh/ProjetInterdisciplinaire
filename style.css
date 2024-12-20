@@ -41,6 +41,99 @@ header{
         border-radius: 5px;
 }
 
+form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-height: 100%;
+    max-width: 400px; /* Reduce the width of the form */
+    margin: 20px auto; /* Center the form horizontally */
+    margin-bottom: 300px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"],
+form button {
+    background-color: #709CA7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+    background-color: #344D59;
+}
+
+main a {
+    display: inline-block;
+    color: white;
+    background-color: #709CA7;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 20px;
+}
+
+main a:hover {
+    background-color: #344D59;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body a:not(header a) {
+    margin-top: 20px; /* Add margin to move links down */
+}
+.schedule-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule-item span {
+    flex: 1; /* Make each span take equal space */
+    text-align: center; /* Center align text */
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: #344D59;
+    margin-right: 10px;
+}
+
+.schedule-course {
+    color: #709CA7;
+    margin-right: 10px;
+}
+
+.schedule-room {
+    color: #555;
+    margin-right: 10px;
+}
+
+.schedule-teacher {
+    color: #555;
+}
+
 footer {
     background-color: #709CA7;
     color: white;
@@ -49,14 +142,56 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: 50px;
 }
 
 footer img{
-    width: 20%;
+    width: 10%;
     margin-left: 5%;
 }
 
 footer p {
     margin: 0;
     padding: 0;
+}
+.resource-container {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    gap: 20px;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item {
+    background-color: #e9f5f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Ensure the item takes full width */
+    box-sizing: border-box;
+}
+
+.resource-item span {
+    margin-right: 20px; /* Increase margin to add more space between items */
+}
+
+.resource-title {
+    font-weight: bold;
+    color: #344D59;
+}
+
+.resource-description {
+    color: #709CA7;
+}
+
+.resource-details {
+    color: #555;
 }

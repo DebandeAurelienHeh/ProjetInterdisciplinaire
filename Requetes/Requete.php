@@ -66,8 +66,8 @@ class Requete extends Modele {
                                                 FROM plannings_globaux
                                                 WHERE plannings_globaux.horaire = ?);";
         $dataModifierHoraire = $this->executerRequete($sqlModifierHoraire, array(
-                                            $_POST['modifierCours'],
-                                            $_POST['choisirHeure']));
+                                                    $_POST['modifierCours'],
+                                                    $_POST['choisirHeure']));
         return $dataModifierHoraire;
 
     }

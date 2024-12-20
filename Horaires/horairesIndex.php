@@ -23,11 +23,14 @@ $dataSelectHoraire = $requeteSelectHoraire->requeteSQLSelectHoraire();
         <a href="horairesModifier.php">Changer l'horaire</a>
         <a href="horairesAjouter.php">Ajouter un cours</a>
         <a href="horairesSupprimer.php">Mettre en pause un cours</a>
-
-        <p>Horaires</p>
         <?php 
         foreach ($dataSelectHoraire as $horaire) {
-            echo '<p>' . $horaire['horaire'] . ' - ' . $horaire['nom_cours'] . ' - local: ' . $horaire['numero_salle'] . ' - professeur: ' . $horaire['nom'] . '</p>';
+            echo '<div class="schedule-item">';
+            echo '<span class="schedule-time">' . $horaire['horaire'] . '</span>';
+            echo '<span class="schedule-course">' . $horaire['nom_cours'] . '</span>';
+            echo '<span class="schedule-room">Local: ' . $horaire['numero_salle'] . '</span>';
+            echo '<span class="schedule-teacher">Professeur: ' . $horaire['nom'] . '</span>';
+            echo '</div>';
         }
 
         ?>
