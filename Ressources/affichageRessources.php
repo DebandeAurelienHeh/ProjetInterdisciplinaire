@@ -17,12 +17,20 @@ $dataAffichageSalles = $requeteAffichageSalles->requeteSQLAffichageSalles();
     <?php
         while($row = $dataAffichageIncidents->fetch()){
             if($row['statut'] == 0){
-                echo '<p> local: ' . $row['numero_salle'] . ', date: ' . $row['date_signalement'] . ', problème: ' . $row['description_incident'] . '</p>';
+                echo '<div class="resource-item">';
+                echo '<span class="resource-title">Local: ' . $row['numero_salle'] . '</span>';
+                echo '<span class="resource-details">Date: ' . $row['date_signalement'] . '</span>';
+                echo '<span class="resource-description">Problème: ' . $row['description_incident'] . '</span>';
+                echo '</div>';
             }
         }
 
         while($row = $dataAffichageSalles->fetch()){
-            echo '<p> ' . $row['nom_cours'] . ', local: ' . $row['numero_salle'] . ', professeur: ' . $row['nom'] . '</p>';
+            echo '<div class="resource-item">';
+            echo '<span class="resource-title">' . $row['nom_cours'] . '</span>';
+            echo '<span class="resource-details">Local: ' . $row['numero_salle'] . '</span>';
+            echo '<span class="resource-details">Professeur: ' . $row['nom'] . '</span>';
+            echo '</div>';
         }
     ?>
 </body>
