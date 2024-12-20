@@ -21,7 +21,7 @@ abstract class Modele {
     private function getBd() {
         if ($this->bd == null) {
             // Création de la connexion
-            $this->bd = new PDO('mysql:host=localhost;dbname=ecole_vlan10;charset=utf8', 'root', '');
+            $this->bd = new PDO('mysql:host=localhost;dbname=ecole_vlan10;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
         return $this->bd;
     }
