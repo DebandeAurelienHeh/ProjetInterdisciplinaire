@@ -17,7 +17,7 @@ require_once('formulaireSupprimer.php');
     <main>
         <form method="post" action="">
                 <label for="changerCours">Entrez l'heure à changer (XX:XX:XX) :</label>
-                <input type="text" id="changerCours" name="changerCours" required>
+                <input type="text" id="changerCours" name="changerCours" pattern="^\d{2}:\d{2}:\d{2}$" required placeholder="HH:MM:SS">
                 <button type="submit">Mise à jour du cours</button>
     </main>
     <footer>
