@@ -19,10 +19,10 @@ require_once('formulaireAjouter.php');
     <form action="" method="POST">
         <h3>Professeur</h3>
         <label for="nom_prof">Nom :</label>
-        <input type="text" id="nom_prof" name="nom_prof" required><br>
+        <input type="text" id="nom_prof" name="nom_prof" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$" required><br>
         
         <label for="prenom_prof">Prénom :</label>
-        <input type="text" id="prenom_prof" name="prenom_prof" required><br>
+        <input type="text" id="prenom_prof" name="prenom_prof" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$" required><br>
         
         <label for="email_prof">Email :</label>
         <input type="email" id="email_prof" name="email_prof" required><br>
@@ -35,18 +35,18 @@ require_once('formulaireAjouter.php');
         
         <h3>Salle</h3>
         <label for="numero_salle">Numéro de salle :</label>
-        <input type="text" id="numero_salle" name="numero_salle" required><br>
+        <input type="text" id="numero_salle" name="numero_salle" pattern="^\d+$" required><br>
         
         <h3>Cours</h3>
         <label for="nom_cours">Nom du cours :</label>
-        <input type="text" id="nom_cours" name="nom_cours" required><br>
+        <input type="text" id="nom_cours" name="nom_cours" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]+$" required><br>
         
         <label for="description_cours">Description :</label>
         <textarea id="description_cours" name="description_cours" required></textarea><br>
         
         <h3>Planning</h3>
         <label for="horaire">Horaire (HH:MM:SS) :</label>
-        <input type="text" id="horaire" name="horaire" required><br>
+        <input type="text" id="horaire" name="horaire" pattern="^\d{2}:\d{2}:\d{2}$" required placeholder="HH:MM:SS"><br>
         
         <button type="submit">Ajouter</button>
     </form>

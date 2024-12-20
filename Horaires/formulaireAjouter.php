@@ -2,17 +2,25 @@
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { // Vérifiez que la méthode de la requête est POST
     $nom_prof = isset($_POST['nom_prof']) ? $_POST['nom_prof'] : '';
+    htmlspecialchars(strip_tags($nom_prof));
     $prenom_prof = isset($_POST['prenom_prof']) ? $_POST['prenom_prof'] : '';
+    htmlspecialchars(strip_tags($prenom_prof));
     $email_prof = isset($_POST['email_prof']) ? $_POST['email_prof'] : '';
+    htmlspecialchars(strip_tags($email_prof));
     $mdp_prof = isset($_POST['mdp_prof']) ? $_POST['mdp_prof'] : '';
+    htmlspecialchars(strip_tags(sha1($mdp_prof)));
     $departement_prof = isset($_POST['departement_prof']) ? $_POST['departement_prof'] : '';
-
+    htmlspecialchars(strip_tags($departement_prof));
     $numero_salle = isset($_POST['numero_salle']) ? $_POST['numero_salle'] : '';
+    htmlspecialchars(strip_tags(int($numero_salle)));
 
     $nom_cours = isset($_POST['nom_cours']) ? $_POST['nom_cours'] : '';
+    htmlspecialchars(strip_tags($nom_cours));
     $description_cours = isset($_POST['description_cours']) ? $_POST['description_cours'] : '';
+    htmlspecialchars(strip_tags($description_cours));
 
     $horaire = isset($_POST['horaire']) ? $_POST['horaire'] : '';
+    htmlspecialchars(strip_tags($horaire));
 
     try {
         // Démarrer une transaction
