@@ -53,8 +53,8 @@ class Requete extends Modele {
                             WHERE cours_global.id_cours IN (
                                                 SELECT plannings_globaux.id_cours
                                                 FROM plannings_globaux
-                                                WHERE plannings_globaux.horaire = '$changerCours');";
-        $dataPauseHoraire = $this->executerRequete($sqlPauseHoraire, $changerCours);
+                                                WHERE plannings_globaux.horaire = ?);";
+        $dataPauseHoraire = $this->executerRequete($sqlPauseHoraire, array($_POST['changerCours']));
         return $dataPauseHoraire;
 
     }
