@@ -15,10 +15,10 @@ require_once('formulaireSupprimer.php');
         ?>
     </header>
     <main>
-    <form method="post" action="">
-            <label for="changerCours">Entrez l'heure à changer (XX:XX:XX) :</label>
-            <input type="text" id="changerCours" name="changerCours" required>
-            <button type="submit">Mise à jour du cours</button>
+        <form method="post" action="">
+                <label for="changerCours">Entrez l'heure à changer (XX:XX:XX) :</label>
+                <input type="text" id="changerCours" name="changerCours" required>
+                <button type="submit">Mise à jour du cours</button>
     </main>
     <footer>
         <?php
